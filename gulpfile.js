@@ -73,7 +73,7 @@ gulp.task("fonts", function () {
         .pipe(gulp.dest("dist/fonts"))
 })
 
-//clean the house
+//delete dist folder
 gulp.task("clean:dist", function () {
     return del.sync("dist");
 })
@@ -87,6 +87,7 @@ gulp.task("default", function (callback) {
 })
 
 //create production website
+//then clean dist folder
 gulp.task("build", function (callback) {
     runSequence("clean:dist", ["sass", "useref", "images", "fonts"],
         callback
