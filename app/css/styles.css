@@ -68,22 +68,11 @@ body {
   width: 960px; }
 
 .container {
-  box-sizing: border-box;
-  margin: 0 40px 90px 40px;
-  padding-left: 40px;
-  padding-right: 40px; }
-
-.container-project {
-  border-bottom: 2px solid black;
-  width: 960px; }
+  margin: 0 auto 60px auto; }
 
 .col-1-2 {
-  border: 2px solid black;
-  border-radius: 6px;
-  display: inline-flex;
-  height: 400px;
-  padding-left: 17x;
-  padding-right: 17px;
+  display: inline-block;
+  overflow: hidden;
   width: 46%; }
 
 .col-1-2:last-of-type {
@@ -102,16 +91,10 @@ body {
     ---------------------
 */
 header h1 {
-  margin-top: 10px;
   font-size: 70px;
   font-weight: 300;
-  padding-top: 200px;
-  text-align: left; }
-
-.project-section h2 {
-  border-bottom: 2px solid black;
-  font-size: 40px;
-  text-align: left; }
+  margin-top: 10px;
+  padding-top: 100px; }
 
 /*
     --------------------
@@ -120,3 +103,82 @@ header h1 {
     --------------------
     --------------------
 */
+.project-section h2 {
+  border-bottom: 2px solid black;
+  font-size: 40px;
+  text-align: left; }
+
+.project-card h4 {
+  border: 1px solid black; }
+
+.project-card {
+  border: 1px solid gray;
+  height: 300px;
+  padding-left: 15x;
+  padding-right: 15px; }
+
+.project-card img {
+  display: block;
+  height: 99.99%;
+  width: 103.4%; }
+
+.project-card p {
+  font-size: 40px;
+  margin: 30% 30%;
+  text-align: center; }
+
+/*
+    ------------------
+    ------------------
+            FORM
+    ------------------
+    ------------------
+*/
+fieldset {
+  margin-left: 40px;
+  margin-bottom: 10px; }
+
+label {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+  padding-right: 50px; }
+
+input,
+textarea {
+  border: 1px solid gray;
+  border-radius: 6px;
+  font-family: Lato;
+  font-size: 22px;
+  height: 50px;
+  margin-bottom: 22px;
+  width: 90%; }
+
+.contact-title {
+  border-bottom: 2px solid black;
+  font-size: 36px;
+  margin-bottom: 20px; }
+
+/*
+    --------------------
+    --------------------
+        FOOTER
+    --------------------
+    --------------------
+*/
+.footer li {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 30px;
+  vertical-align: top; }
+
+.footer a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none; }
+
+footer a:hover {
+  color: cornflowerblue; }
+
+.footer li:last-of-type {
+  margin-right: 0; }
