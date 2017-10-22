@@ -47,156 +47,147 @@ table {
 	border-spacing: 0;
 }
 
-
-
-
 /*
-    --------------------
-    --------------------
-        CUSTOM STYLES
-    --------------------
-    --------------------
+    ----------------
+    ----------------
+       TYPOGRAPHY
+    ----------------
+    ----------------
 */
 body {
     font-family: Lato;
 }
 
-/*
-    ---------------------
-    ---------------------
-            GRID
-    ---------------------
-    ---------------------
-*/
-.container,
-.grid,
-.project-section{
-    width: 960px;
-}
-.container {
-    margin: 0 auto 60px auto;
-}
-.col-1-2 {
-    display: inline-block;
-    overflow: hidden;
-    width: 46%;  
-}
-.col-1-2:last-of-type {
-    margin-left: 22px;
-}
-.row {
-    margin-bottom: 22px;
-    margin-top: 22px;
-    vertical-align: top;
-}
-
 
 /*
-    ---------------------
-    ---------------------
-        TYPOGRAPHY
-    ---------------------
-    ---------------------
+    ----------------
+    ----------------
+        BORDERS
+    ----------------
+    ----------------
 */
-header h1 {
-    font-size: 70px;
-    font-weight: 300;
-    margin-top: 10px;
-    padding-top: 100px;
-}
-
-
-/*
-    --------------------
-    --------------------
-        PROJECTS
-    --------------------
-    --------------------
-*/
-.project-section h2 {
-    border-bottom: 2px solid black;
-    font-size: 40px;
-    text-align: left;
-}
-.project-card h4 {
+//work in progress
+.nav-container,
+.hero-container,
+.projects-container,
+.project,
+.project-image,
+.project-description,
+.featured-work {
     border: 1px solid black;
 }
-.project-card {
-    border: 1px solid gray;
-    height: 300px;
-    padding-left: 15x;
-    padding-right: 15px;  
+
+/*
+    ---------------
+    ---------------
+      CONTAINERS
+    ---------------
+    ---------------
+*/
+.nav-container,
+.hero-container,
+.projects-section,
+.projects-container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 80px 60px 80px; 
+    padding: 80px 10px;
+    box-sizing: border-box;
 }
-.project-card img {
-    display: block;
-    height: 99.99%;
-    width: 103.4%;
+
+
+
+/*
+    ----------------
+    ----------------
+        NAVBAR
+    ----------------
+    ----------------
+*/
+.logo-container {
+    display: flex;
+    flex: 1;
 }
-.project-card p{
+.logo-container img {
+    align-self: flex-end;
+    height: 80%;
+}
+.nav-menu {
+    display: flex;
+    flex: 1;
+    flex-direction: row; 
+    justify-content: flex-end;
+}
+.nav-menu-about,
+.nav-menu-work{
+    align-self: flex-end;
+    font-size: 36px;
+    margin-left: 59px;    
+}
+
+/*
+    -----------------
+    -----------------
+          HERO
+    -----------------
+    -----------------
+*/
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 100px 80px 20px 80px;
+    padding: 80px 10px;
+    box-sizing: border-box;
+}
+.hero-content {
+    text-align:left;
+    font-size: 90px;
+    line-height: 1;
+    letter-spacing: 10px;
+}
+.hero-content p{
+    text-decoration: underline;
+}
+
+/*
+    ----------------
+    ----------------
+        PROJECTS
+    ----------------
+    ----------------
+*/
+.projects-section {
+    flex-direction: column;
+}
+.featured-work {
     font-size: 40px;
-    margin: 30% 30%;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.projects-container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+.project img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.project h4 {
+    font-size: 20px;
+    line-height: 2;
     text-align: center;
 }
-
-/*
-    ------------------
-    ------------------
-            FORM
-    ------------------
-    ------------------
-*/
-fieldset {
-    margin-left: 40px;
-    margin-bottom: 10px;
+.project p {
+    font-size: 14px;
+    text-align: center; 
 }
-label {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 5px;
-    padding-right: 50px;
+.project {
+    border: 1px solid red;
 }
-input,
-textarea {
-    border: 1px solid gray;
-    border-radius: 6px;
-    font-family: Lato;
-    font-size: 22px;
-    height: 50px;
-    margin-bottom: 22px;
-    width: 90%;
-}
-.contact-title {
-    border-bottom: 2px solid black;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-/*
-    --------------------
-    --------------------
-        FOOTER
-    --------------------
-    --------------------
-*/
-.footer li {
-    display: inline-block;
-    margin-right: 40px;
-    font-size: 30px;
-    vertical-align: top;
-}
-.footer a {
-    color: black;
-    font-size: 18px;
-    text-decoration: none;
-}
-footer a:hover {
-    color: cornflowerblue;
-}
-.footer li:last-of-type {
-    margin-right: 0;
-}
-
-
 
 
 
