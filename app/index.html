@@ -3,6 +3,7 @@
 
 <head>
     <title>Portfolio</title>
+    <link rel="icon" href="images/favicon.ico/favicon.ico">
     <meta charset="utf-8" />
 
     <!-- build:css css/styles.min.css -->
@@ -17,63 +18,80 @@
 <body>
 
     <!-- Navbar -->
+    <header class="section" id="header-section">
+        <div class="nav-container">
 
-    <navbar class="nav-container">
-        <div class="logo-container">
-            <img src="images/Logo_v0.png">
-        </div>
+            <div class="nav-menu">
 
-        <div class="nav-menu">
-            <div class="nav-menu-about">
-                <p>About</p>
-            </div>
-            <div class="nav-menu-work">
-                <p>Work</p>
+                <div class="nav-menu-work">
+                    <p><a href="#projects-section">Work</a></p>
+                </div>
+
+                <div class="logo-container">
+                    <img src="images/Logo_v0.png">
+                </div>
+
+                <div class="nav-menu-about">
+                    <p><a href="#">About</a></p>
+                </div>
             </div>
         </div>
-    </navbar>
+    </header>
+
 
 
 
     <!-- Hero section -->
-
-    <section class="hero-container">
-        <div class="hero-content">
-            Hi, I'm Davide Iaiunese<br>
-            <p>I build websites</p>
+    <section class="section" id="hero-section">
+        <div class="hero-container" id="hero">
+            <div class="hero-content">
+                <p>I build websites</p>
+            </div>
         </div>
     </section>
 
 
 
 
+
     <!-- Projects -->
+    <section class="section" id="projects-section">
+        <div class="work-container">
 
-    <section class="projects-section">
+            <div class="featured-work">
+                <p>Featured Work</p>
+            </div>
 
-        <div class="featured-work">
-            <p>Featured Work</p>
+            <div class="projects-container">
+
+                <div class="project" id="project-1">
+                    <h1 class="project-1-header">Loremp Ipsum</h1>
+                    <p class="project-1-text">
+                        Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <strong>labore et dolor</strong>labore et dolore magna aliqua.
+                    </p>
+                </div>
+
+                <div class="project" id="project-2">
+                </div>
+
+                <div class="project" id="project-3">
+                </div>
+
+            </div>
         </div>
 
-        <div class="projects-container">
-           
-            <div class="project" id="pro1">
-                    <img class="project-img" src="images/300.png">                   <h4>Project name</h4>
-                    <p>Some description</p>
-            </div>
+    </section>
 
-            <div class="project" id="pro2">
-                    <img class="project-img" src="images/300.png">                   <h4>Project name</h4>
-                    <p>Some description</p>
-            </div>
 
-            <div class="project" id="pro3">
-                    <img class="project-img" src="images/300.png">                   <h4>Project name</h4>
-                    <p>Some description</p>
-            </div>
-            
+
+    <!-- Footer -->
+
+    <section class="section" id="footer-section">
+        <div class="footer-container">
+            <a href="https://github.com/davide2894" target="_blank">Github</a>
+            <a href="mailto:davide.iaiunese@gmail.com">Email me</a>
+            <a href="https://www.linkedin.com/in/davideiaiunese/" target="_blank">Linkedin</a>
         </div>
-
     </section>
 
 </body>
