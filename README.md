@@ -1,16 +1,16 @@
-﻿#Portfolio project
+﻿# Portfolio project
 Hello! This is my portfolio project.
 
-##Idea.
+## Idea.
 Build a live portfolio that will get updates as I am learning more. 
 
-##Requirements
+## Requirements
 What I am using is the following:
 deployment: Jekyll framework
 HTML5 for content
 CSS for style, Flexbox for the layout model
 
-##Plan
+## Plan
 More or less:
 1. build a static web page
 setup gulp into project dir
