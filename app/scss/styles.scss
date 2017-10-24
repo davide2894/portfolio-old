@@ -58,6 +58,17 @@ body {
     font-family: Lato;
 }
 
+/*
+    ----------------
+    ----------------
+      TRANSITIONS
+    ----------------
+    ----------------
+*/
+
+
+
+
 
 
 /*
@@ -68,10 +79,14 @@ body {
     ----------------
 */
 
-.section,
-.footer-container {
-    border: 1px solid black;
+.section {
+    border: none;
 }
+.nav-section {
+    border-top: none;
+}
+
+
 
 /*
     ---------------
@@ -82,6 +97,7 @@ body {
 */
 .nav-container,
 .hero-container,
+.about-container,
 .work-container,
 .footer-container {
     display: flex;
@@ -90,20 +106,47 @@ body {
     margin: 50px auto; 
     box-sizing: border-box;
 }
-.work-container {
-    margin-top: 40px;
-}
-#projects-container {
-    padding: 0 0 0 100px;
-}
-#hero-section {
+.projects-section,
+.about-section {
     padding: 100px 0;
+}
+
+.hero-section {
+    padding: 90px 0 0 0;
+    
 }
 #footer-section {
     padding: 80px 0;
 }
 
-
+/*
+    ---------------
+    ---------------
+        LINKS
+    ---------------
+    ---------------
+*/
+.hoverable {
+    transition: border-bottom 0.1s ease-in-out;
+    border-bottom: none;
+    color: #000;
+    text-decoration: none;
+}
+.hoverable:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+.about-email {
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#github,
+#email,
+#linkedin{
+    font-size: 20px;
+    margin: 0 20px;
+}
 
 /*
     ----------------
@@ -120,7 +163,9 @@ body {
     height: 40px;
 }
 .nav-menu-about,
-.nav-menu-work{
+.nav-menu-work,
+.nav-menu-blog,
+.nav-menu-email {
     align-self: flex-end;
     font-size: 20px;
 }
@@ -130,22 +175,15 @@ body {
     flex-direction: row; 
     justify-content: center;
 }
-.nav-menu-work {
+.nav-menu-work,
+.nav-menu-blog {
     margin-right: 10px;
 }
-.nav-menu-work a,
-.nav-menu-about a {
-    border-bottom: 2px solid light;
-    color: #000;
-    text-decoration: none;
-}
-.nav-menu-work a:hover,
-.nav-menu-about a:hover {
-    border-bottom: 2px solid #000;
-}
+.nav-menu-email,
 .nav-menu-about {
     margin-left: 10px;
 }
+
 
 /*
     -----------------
@@ -174,6 +212,32 @@ body {
 /*
     ----------------
     ----------------
+        ABOUT
+    ----------------
+    ----------------
+*/
+.about-container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+.about-picture img {
+    border: 1px solid black;
+    height: 100%;
+}
+.about-me {
+    flex-basis: 50%;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 40px;
+}
+
+
+
+
+/*
+    ----------------
+    ----------------
         PROJECTS
     ----------------
     ----------------
@@ -184,9 +248,7 @@ body {
 }
 .featured-work {
     border-bottom: 10px solid #000;
-    border-radius: 4px;
     font-size: 100px;
-    margin-bottom: 20px;
 }
 .projects-container{
     display: flex;
@@ -194,22 +256,110 @@ body {
     justify-content: space-between;
 }
 .project {
-    border: 1px solid black;
     width: 1200px;
     height: 400px; 
 }
 #project-1 {
-    background-image: url(/images/Unsplash-RealEstate-banner-1200x400.jpg);
+    background-image: url(/images/unsplash_house_rocks-1200x400.jpg);
     opacity: 0.8;
 }
 #project-2 {
-    background-image: url(/images/steve-halama-225825-twochairs-banner-1200x400.jpg);
+    background-image: url(/images/sea-1200x1400.jpg);
     opacity: 0.8;
 }
 #project-3 {
-    background-image: url(/images/unsplash-city-avenue-1200x400.jpg);
+    background-image: url(/images/unsplash_chairs11.jpg);
     opacity: 0.8;    
 }    
+
+/*
+    Project 1 
+    ---------
+*/
+.project-1-h1 {
+    font-family: Futura, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    width: 40%;
+}
+.project-1-p:before {
+    content: "";
+    width: 60px;
+    position: absolute;
+    top: -30px;
+    background: currentColor;
+    height: 3px;
+}
+.project-1-p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    top: 100px;
+    left: 10px;
+    width: 40%;
+}
+
+/*
+    Project 2 
+    ---------
+*/
+.project-2-h1 {
+    font-family: Futura, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    width: 40%;
+}
+
+.project-2-p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    top: 60px;
+    left: 50%;
+    width: 40%;
+}
+
+/*
+    Project 1 
+    ---------
+*/
+.project-3-h1 {
+    font-family: Futura, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    top: 50%;
+    left: 38%;
+    width: 40%;
+}
+.project-3-p:before {
+    content: "";
+    width: 60px;
+    position: absolute;
+    top: -20px;
+    left: 32%;
+    background: currentColor;
+    height: 3px;
+}
+.project-3-p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    top: 60%;
+    left: 38%;
+    width: 40%;
+}
+
+
 
 /*
     --------------------
@@ -218,13 +368,15 @@ body {
     --------------------
     --------------------
 */
+#footer-section {
+    padding: 10px 0 0 10px;
+    
+}
 .footer-container {
     justify-content: center;
 }
-.footer-container a {
-    font-size: 16px;
-    margin: 0 20px;
-}
+
+
 
 
 

@@ -3,7 +3,7 @@
 
 <head>
     <title>Portfolio</title>
-    <link rel="icon" href="images/favicon.ico/favicon.ico">
+    <link rel="icon" href="images/logo-v2.ico/favicon.ico">
     <meta charset="utf-8" />
 
     <!-- build:css css/styles.min.css -->
@@ -13,26 +13,40 @@
     <!-- build:js js/main.min.js -->
     <script src="js/main.js"></script>
     <!-- endbuild -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <header class="section" id="header-section">
+    <header class="section header-section">
         <div class="nav-container">
 
             <div class="nav-menu">
 
                 <div class="nav-menu-work">
-                    <p><a href="#projects-section">Work</a></p>
+                    <p><a href="#work" class="hoverable">Work</a></p>
+                </div>
+
+                <div class="nav-menu-blog">
+                    <p><a href="#blog" class="hoverable">Blog</a></p>
                 </div>
 
                 <div class="logo-container">
-                    <img src="images/Logo_v0.png">
+                    <a href="#" class="hoverable" id="home">
+                        <img src="images/logo-v2.png">
+                     </a>
+                </div>
+
+                <div class="nav-menu-email">
+                    <p><a href="mailto:davide.iaiunese@gmail.com" class="hoverable">Email</a></p>
                 </div>
 
                 <div class="nav-menu-about">
-                    <p><a href="#">About</a></p>
+                    <p><a href="#about" class="hoverable">About</a></p>
                 </div>
             </div>
         </div>
@@ -42,7 +56,7 @@
 
 
     <!-- Hero section -->
-    <section class="section" id="hero-section">
+    <section class="section hero-section">
         <div class="hero-container" id="hero">
             <div class="hero-content">
                 <p>I build websites</p>
@@ -54,8 +68,10 @@
 
 
 
+
+
     <!-- Projects -->
-    <section class="section" id="projects-section">
+    <section class="section projects-section" id="work">
         <div class="work-container">
 
             <div class="featured-work">
@@ -65,16 +81,24 @@
             <div class="projects-container">
 
                 <div class="project" id="project-1">
-                    <h1 class="project-1-header">Loremp Ipsum</h1>
-                    <p class="project-1-text">
+                    <h1 class="project-1-h1">Lorem Ipsum</h1>
+                    <p class="project-1-p">
                         Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <strong>labore et dolor</strong>labore et dolore magna aliqua.
                     </p>
                 </div>
 
                 <div class="project" id="project-2">
+                    <h1 class="project-2-h1">Lorem Ipsum</h1>
+                    <p class="project-2-p">
+                        Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <strong>labore et dolor</strong>labore et dolore magna aliqua.
+                    </p>
                 </div>
 
                 <div class="project" id="project-3">
+                    <h1 class="project-3-h1">Lorem Ipsum</h1>
+                    <p class="project-3-p">
+                        Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <strong>labore et dolor</strong>labore et dolore magna aliqua.
+                    </p>
                 </div>
 
             </div>
@@ -84,13 +108,33 @@
 
 
 
+    <!-- About -->
+    <section class="section about-section" id="about">
+        <div class="about-container">
+
+            <img src="images/profile.png">
+
+            <div class="about-me">
+                <p>Hi, my name is Davide Iaiunese (quite a mouthul surname) and I am a front-end web developer, currently residing in Italy.
+                    <br><br> While I am not programming or building websites, I enjoy reading about philosophy and self-development.
+                    <br><br>If you have a challenging project I might be interested in, feel free to contact me at
+                    <a href="mailto:davide.iaiunese@gmail.com" class="hoverable about-email">           davide.iaiunese@gmail.com
+                </a>.
+            </div>
+
+        </div>
+    </section>
+
+
+
+
     <!-- Footer -->
 
-    <section class="section" id="footer-section">
+    <section class="section footer-section">
         <div class="footer-container">
-            <a href="https://github.com/davide2894" target="_blank">Github</a>
-            <a href="mailto:davide.iaiunese@gmail.com">Email me</a>
-            <a href="https://www.linkedin.com/in/davideiaiunese/" target="_blank">Linkedin</a>
+            <a href="https://github.com/davide2894" class="hoverable" target="_blank" id="github">Github</a>
+            <a href="mailto:davide.iaiunese@gmail.com" class="hoverable" id="email">Email me</a>
+            <a href="https://www.linkedin.com/in/davideiaiunese/" class="hoverable" target="_blank" id="linkedin">Linkedin</a>
         </div>
     </section>
 
