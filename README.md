@@ -54,7 +54,7 @@ Improved about section, overall spacing and put contact links as navbar items.
 
 
 
-##Credits
+## Credits
 [logomkr](https://logomakr.com/) for using their platform to create my own logo.
 [favicon generator](https://www.favicon-generator.org/) for using their website to make the favicon version of the logo.
 
