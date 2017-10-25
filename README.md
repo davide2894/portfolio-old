@@ -38,16 +38,19 @@ Built page layout the first time by using normal CSS, then I learned more about 
 Today I improved the layout after researching for modern portfolio pages. It is starting to look decent.
 	
 ### Day 7 
-I started by adding styled text to the first project’s relative space.
+Added styled text to the first project’s relative space.
 
 ### Day 8
 Well my focus now is only the styling since the layout is pretty much defined already. Improvements maid:
-..* fixed project section. In order to do this I had to position the project name and description with in mind the goal to improve the communication
-..* added footer section with three simple links, one to my GitHub profile, one to my email and a third to my Linkedin profile
-..* added about section, I decided to display the picture and the description next to each other.
-..* transitions: added to links when hovered, so the appearance of the black bottom-border is not instant. Added respective “Links” section to my stylesheet
-..* wrote better code in the stylesheet by replacing all of the anchor references to one class: “.hoverable”
-..* changed logo
+	* fixed project section. In order to do this I had to position the project name and description with in mind the goal to improve the communication
+	* added footer section with three simple links, one to my GitHub profile, one to my email and a third to my Linkedin profile
+	* added about section, I decided to display the picture and the description next to each other.
+	* transitions: added to links when hovered, so the appearance of the black bottom-border is not instant. Added respective “Links” section to my stylesheet
+	* wrote better code in the stylesheet by replacing all of the anchor references to one class: “.hoverable”
+	* changed logo
+
+### Day 9
+Improved about section, overall spacing and put contact links as navbar items.
 
 
 
