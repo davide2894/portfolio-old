@@ -1,7 +1,7 @@
-﻿﻿# Portfolio project
+﻿# Portfolio project
 Hello! This is my portfolio project.
 
-## Idea.
+## Idea
 Build a live portfolio that will get updates as I am learning more. 
 
 ## Requirements
