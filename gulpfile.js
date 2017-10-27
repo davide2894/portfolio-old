@@ -9,7 +9,7 @@ var imagemin = require("gulp-imagemin");
 var cache = require("gulp-cache");
 var del = require("del");
 var runSequence = require("run-sequence");
-var deploy = require("gulp-gh-pages");
+var ghPages = require("gulp-gh-pages");
 var browserSync = require("browser-sync").create();
 
 
@@ -96,6 +96,6 @@ gulp.task("build", function (callback) {
 })
 
 gulp.task("deploy", ["build"], function () {
-    return glp.src("dist/**/*")
-        .pipe(deploy())
+    return glp.src("./dist/**/*")
+        .pipe(ghPages())
 });
