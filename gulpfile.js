@@ -96,6 +96,6 @@ gulp.task("build", function (callback) {
 })
 
 gulp.task("deploy", ["build"], function () {
-    return glp.src("./dist/**/*")
+    return glp.src("dist/**/*")
         .pipe(deploy())
 });
