@@ -6,10 +6,10 @@ var uglify = require("gulp-uglify");
 var gulpIf = require("gulp-if");
 var cssnano = require("gulp-cssnano");
 var imagemin = require("gulp-imagemin");
-var cache = require("gulp-cache");
 var del = require("del");
 var runSequence = require("run-sequence");
-var ghPages = require("gulp-gh-pages");
+var cache = require("gulp-cache");
+var deploy = require("gulp-gh-pages");
 var browserSync = require("browser-sync").create();
 
 
@@ -61,13 +61,15 @@ gulp.task("useref", function () {
 
 //minify images
 gulp.task("images", function () {
-    return gulp.src("app/images/**/*.+(png|jpg|gif|svg)")
-        //cache images that ran through imagemin
-        .pipe(cache(imagemin({
-            interlaced: true
-        })))
+    return gulp.src("app/images/**/*.+(png|jpg|jpeg|gif|svg)")
+        .pipe(imagemin())
         .pipe(gulp.dest("dist/images"))
 });
+
+// Clearing caches
+gulp.task('cache:clear', function(callback) {
+  return cache.clearAll(callback);
+})
 
 gulp.task("fonts", function () {
     return gulp.src("app/fonts/**/*")
@@ -75,27 +77,26 @@ gulp.task("fonts", function () {
 })
 
 //delete dist folder
-gulp.task("clean:dist", function () {
+gulp.task("clear", function () {
     return del.sync("dist");
 })
 
 //Build sequence
 //--------------
 gulp.task("default", function (callback) {
-    runSequence(["sass", "browserSync", watch],
+    runSequence(["sass", "browserSync", "watch"],
         callback
     )
 })
 
 //create production website
-//then clean dist folder
 gulp.task("build", function (callback) {
-    runSequence("clean:dist", ["sass", "useref", "images", "fonts"],
+    runSequence(["sass", "useref", "images", "fonts"],
         callback
     )
 })
 
 gulp.task("deploy", ["build"], function () {
-    return glp.src("./dist/**/*")
-        .pipe(ghPages())
+    return gulp.src("dist/**/*")
+        .pipe(deploy())
 });
