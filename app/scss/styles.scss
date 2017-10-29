@@ -176,7 +176,7 @@ body {
     -----------------
 */
 .hero-section {
-    background-image: url(/images/background-5.jpg);
+    background: url("../images/background5.jpg");
     background-color: rgba(0, 0, 0, 0.1);
     background-repeat: no-repeat;
     background-position: center;
@@ -226,15 +226,15 @@ body {
     height: 400px; 
 }
 #project-1 {
-    background-image: url(/images/unsplash_house_rocks-1200x400.jpg);
+    background-image: url(../images/unsplash_house_rocks-1200x400.jpg);
     opacity: 0.8;
 }
 #project-2 {
-    background-image: url(/images/sea-1200x1400.jpg);
+    background-image: url(../images/sea-1200x1400.jpg);
     opacity: 0.8;
 }
 #project-3 {
-    background-image: url(/images/unsplash_chairs11.jpg);
+    background-image: url(../images/unsplash_chairs11.jpg);
     opacity: 0.8;    
 }    
 

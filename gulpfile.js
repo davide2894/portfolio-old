@@ -10,6 +10,8 @@ var del = require("del");
 var runSequence = require("run-sequence");
 var cache = require("gulp-cache");
 var deploy = require("gulp-gh-pages");
+var cssUrl = require("gulp-css-url-adjuster");
+var rename = require("gulp-rename");
 var browserSync = require("browser-sync").create();
 
 
@@ -55,20 +57,33 @@ gulp.task("useref", function () {
         //minifies .js files
         .pipe(gulpIf("*.js", uglify()))
         //minifies .css files
-        .pipe(gulpIf("*.css", cssnano()))
         .pipe(gulp.dest("dist"))
 });
 
+gulp.task("cssUrl", function () {
+    gulp.src("app/css/styles.css")
+        .pipe(cssUrl({
+            prepend: "/dist/"
+        }))
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest("dist/css"));
+})
+
 //minify images
 gulp.task("images", function () {
-    return gulp.src("app/images/**/*.+(png|jpg|jpeg|gif|svg)")
-        .pipe(imagemin())
-        .pipe(gulp.dest("dist/images"))
-});
+    return gulp.src("app/images/**/*")
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }]
+        }))
+        .pipe(gulp.dest("dist/images"));
+})
 
 // Clearing caches
-gulp.task('cache:clear', function(callback) {
-  return cache.clearAll(callback);
+gulp.task('cache:clear', function (callback) {
+    return cache.clearAll(callback);
 })
 
 gulp.task("fonts", function () {
@@ -94,9 +109,9 @@ gulp.task("build", function (callback) {
     runSequence(["sass", "useref", "images", "fonts"],
         callback
     )
-})
+});
 
 gulp.task("deploy", ["build"], function () {
-    return gulp.src("dist/**/*")
+    return gulp.src("../dist/**/*")
         .pipe(deploy())
 });
